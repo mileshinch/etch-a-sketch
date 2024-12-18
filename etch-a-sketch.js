@@ -43,5 +43,27 @@ for (let i = 1; i <= 16; i++) {
 
 // the squares are flex box items - what should their flex behaviour be?
 
+// CREATING THE HOVER EFFECT
+
+// set up an event listener for when 
+// my mouse enters a square
+
+// create a square object
+const squares = document.querySelectorAll(".square")
+// set up an event listener for all the squares
+squares.forEach((square) => {
+    // and for each one we add a 'click' listener
+    square.addEventListener("mouseenter", () => {
+      console.log("you have entered a new square");
+      square.style.backgroundColor = "#00008B"
+    });
+  });
+
+// when the event is triggered change 
+// the colour of the div
+
+
+
+
 
 
