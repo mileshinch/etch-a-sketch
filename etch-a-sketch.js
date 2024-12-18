@@ -1,15 +1,11 @@
-// set margins, padding and borders to 0
-
-// create a square container for the grid
-
-// set the width and height equal to the viewport width
-
 // get container as javascript obj
 const container = document.querySelector(".container")
 
 // fill the container with 16 rows
 
-for (let i = 1; i <= 16; i++) {
+let n = 40
+
+for (let i = 1; i <= n; i++) {
     // add a row div as js obj
     const row = document.createElement("div")
     // give it a class
@@ -18,7 +14,7 @@ for (let i = 1; i <= 16; i++) {
     row.style.outline = "1px dashed"
 
     // for each row fill it with 16 squares
-    for (let j = 1; j <= 16; j++) {
+    for (let j = 1; j <= n; j++) {
         // add a square as js obj
         const square = document.createElement("div")
         // give it a class of square
@@ -33,21 +29,6 @@ for (let i = 1; i <= 16; i++) {
     container.appendChild(row)
 }
 
-// the rows are flexbox items - what should their flex behaviour be?
-
-// each row is a flexbox container
-
-// fill each row with 16 square divs
-//do I need to actually make them squares?
-// or will they be squares naturally because the container is square?
-
-// the squares are flex box items - what should their flex behaviour be?
-
-// CREATING THE HOVER EFFECT
-
-// set up an event listener for when 
-// my mouse enters a square
-
 // create a square object
 const squares = document.querySelectorAll(".square")
 // set up an event listener for all the squares
@@ -59,8 +40,17 @@ squares.forEach((square) => {
     });
   });
 
-// when the event is triggered change 
-// the colour of the div
+// create a button in the DOM
+
+const btn = document.createElement("button")
+btn.innerText = "Create grid"
+// append button to body
+const body = document.querySelector("body")
+body.appendChild(btn)
+
+btn.addEventListener("click", () => {
+  let numOfSquares = prompt("How many squares per side do you want? Enter a number between 1 and 100","100")
+})
 
 
 
